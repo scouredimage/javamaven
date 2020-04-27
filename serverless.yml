@@ -1,0 +1,20 @@
+org: scouredimage
+app: demoapp
+service: javamaven
+
+provider:
+  name: aws
+  runtime: java8
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+
+package:
+  artifact: 'target/${self:service}-${self:provider.stage}.jar'
+
+functions:
+  hello:
+    handler: com.scouredimage.Hello
+    events:
+      - http:
+          path: /hello
+          method: get
