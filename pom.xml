@@ -4,7 +4,7 @@
   <groupId>com.scouredimage</groupId>
   <artifactId>javamaven</artifactId>
   <packaging>jar</packaging>
-  <version>dev</version>
+  <version>${env.SERVERLESS_STAGE}</version>
   <name>hello</name>
 
   <properties>
