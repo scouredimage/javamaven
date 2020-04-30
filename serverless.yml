@@ -4,7 +4,7 @@ service: javamaven
 
 provider:
   name: aws
-  runtime: java8
+  runtime: java11
   stage: ${opt:stage, 'dev'}
   region: ${opt:region, 'us-east-1'}
 
